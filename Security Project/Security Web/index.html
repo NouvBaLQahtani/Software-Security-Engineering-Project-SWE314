@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style1.css" type="text/css">
+  <title>RSA Encryption & Decryption</title>
+
+  <script>
+  // RSA Encryption & Decryption
+  function encryptNumber() {
+  var numberInput = document.getElementById("numberInput").value;
+  var resultOutput = document.getElementById("resultOutput");
+  
+  if (!/^[-+]?\d+$/.test(numberInput) || numberInput < 0 || numberInput > 11021) {
+    alert("Please enter a valid integer between 0 and 11021.");
+    return;
+  }
+
+  var number = parseInt(numberInput);
+
+  var p = 103; // Prime number p
+  var q = 107; // Prime number q
+  
+  // Calculate n
+  var n = p * q;
+  
+  // Calculate phi
+  var phi = (p - 1) * (q - 1);
+  
+  // Calculate public key exponent e
+  var e = calculatePublicKeyExponent(phi);
+  
+  // Calculate private key exponent d
+  var d = calculatePrivateKeyExponent(e, phi);
+  
+  var encryptedNumber = modPow(number, e, n);
+  resultOutput.value = "Encrypted: " + encryptedNumber;
+}
+
+function decryptNumber() {
+  var numberInput = document.getElementById("numberInput").value;
+  var resultOutput = document.getElementById("resultOutput");
+  
+  if (!/^[-+]?\d+$/.test(numberInput) || numberInput < 0 || numberInput > 11021) {
+    alert("Please enter a valid integer between 0 and 11021.");
+    return;
+  }
+
+  var number = parseInt(numberInput);
+
+  var p = 103; // Prime number p
+  var q = 107; // Prime number q
+  
+  // Calculate n
+  var n = p * q;
+  
+  // Calculate phi
+  var phi = (p - 1) * (q - 1);
+  
+  // Calculate public key exponent e
+  var e = calculatePublicKeyExponent(phi);
+  
+  // Calculate private key exponent d
+  var d = calculatePrivateKeyExponent(e, phi);
+  
+  var decryptedNumber = modPow(number, d, n);
+  resultOutput.value = "Decrypted: " + decryptedNumber;
+}
+
+    
+    function calculatePublicKeyExponent(phi) {
+      // Choose a public key exponent e such that 1 < e < phi and e is coprime with phi
+      var e = 17; // Default value for it can be changed
+      
+      // Check if the default value satisfies the conditions
+      if (isCoprime(e, phi)) {
+        return e;
+      }
+      
+      // Find the next coprime value of e
+      while (!isCoprime(e, phi)) {
+        e++;
+      }
+      
+      return e;
+    }
+    
+    function calculatePrivateKeyExponent(e, phi) {
+      // Calculate the modular multiplicative inverse of e modulo phi
+      // Here, we'll use the Extended Euclidean Algorithm to find the modular inverse
+      var d = extendedEuclidean(e, phi);
+      
+      // Make sure d is positive
+      if (d < 0) {
+        d = (d % phi + phi) % phi;
+      }
+      
+      return d;
+    }
+    
+    function isCoprime(a, b) {
+      // Check if a and b are coprime (their greatest common divisor is 1)
+      while (b !== 0) {
+        var temp = b;
+        b = a % b;
+        a = temp;
+      }
+      return a === 1;
+    }
+    
+    function extendedEuclidean(a, b) {
+      if (b === 0) {
+        return a;
+      }
+      var x1 = 1;
+      var y1 = 0;
+      var x2 = 0;
+      var y2 = 1;
+      
+      while (b !== 0) {
+        var q = Math.floor(a / b);
+        var r = a % b;
+        
+        var x = x1 - q * x2;
+        var y = y1 - q * y2;
+        
+        a = b;
+        b = r;
+        
+        x1 = x2;
+        y1 = y2;
+        x2 = x;
+        y2 = y;
+      }
+      return x1;
+    }
+    
+    function modPow(base, exponent, modulus) {
+      if (modulus === 1) return 0;
+      var result = 1;
+      base = base % modulus;
+      while (exponent > 0) {
+        if (exponent % 2 === 1)
+          result = (result * base) % modulus;
+        exponent = Math.floor(exponent / 2);
+        base = (base * base) % modulus;
+      }
+      return result;
+    }
+
+  </script>
+</head>
+<body>
+  <div class="section">
+    <div class="reviews">
+      <div class="card">
+        <div class="body-card">
+          <h2 class="title">RSA Encryption & Decryption</h2>
+          <p class="range-text">Please enter an integer number between 0 and 11021</p>
+          <br><br>
+
+          <div class="input-container">
+            <input type="text" id="numberInput" placeholder="Type a number here" />
+          </div>
+
+          <div class="button-container">
+            <button class="encrypt-btn" onclick="encryptNumber()">Encrypt</button>
+            <button class="decrypt-btn" onclick="decryptNumber()">Decrypt</button>
+          </div>
+
+          <div class="result-container">
+            <h3 class="inner">Result</h3>
+            <input type="text" id="resultOutput" readonly />
+          </div>
+      
+          <br>
+          <button class="back-btn"><a href="SecureCrypt.html">Back</a></button>
+        </div><!--body-card-->
+      </div><!--card-->
+    </div><!--reviews-->
+  </div><!--section-->
+</body>
+<footer class="footer">
+  Done by Group#1 Alanoud - Layan - Lama - Nada - Nouv
+</footer>
+
+</html>

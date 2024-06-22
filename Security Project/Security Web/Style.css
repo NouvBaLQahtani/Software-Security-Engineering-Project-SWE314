@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+body {
+  background-image: url("Desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: white;
+}
+
+
+header {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 95%;
+  max-width: 1500px;
+  white-space: nowrap;
+  /* Added */
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+
+/* Section One */
+.section-one {
+  margin: 11rem auto;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.header {
+  font-size: 3.5rem;
+  white-space: nowrap;
+}
+
+.section-one-paragraph {
+  margin: 2rem auto;
+  width: 70%;
+  max-width: 500px;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.Specification-btn {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: .8rem;
+  text-decoration: none;
+  color: black;
+
+}
+
+.Specification-btn:hover {
+  background: #38D9BA;
+  color: white;
+
+}
+
+
+.Encryption-btn {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: .8rem;
+  text-decoration: none;
+  color: black;
+}
+
+.Encryption-btn:hover {
+  background: #38D9BA;
+  color: white;
+}
+
+.Deccryption-btn {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: .8rem;
+  text-decoration: none;
+  color: black;
+}
+
+.Deccryption-btn:hover {
+  background: #38D9BA;
+  color: white;
+}
+
+
+
+@media (min-width: 900px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+}
+
+/* Flex Group Mobile */
+@media (max-width: 800px) {
+  .flex-group {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #191e1d;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style1.css" type="text/css">
+
+  <title>Algorithm Specification</title>
+</head>
+<body>
+
+
+  <div class="section">
+    <div class="reviews">
+ 
+   <div class="card">
+    <div class="body-card">
+
+      <h2 class="T">RSA Algorithm</h2>
+      <p>
+        The RSA algorithm is a widely used public-key encryption algorithm that provides secure communication and data protection. It operates based on the following steps:
+      </p>
+      <ol>
+        <li>Key Generation:</li>
+        <ul>
+          <li>Select two distinct prime numbers, p and q.</li>
+          <li>Compute n = p * q and φ(n) = (p - 1) * (q - 1), where φ is Euler's totient function.</li>
+          <li>Choose an integer e such that 1 < e < φ(n) and gcd(e, φ(n)) = 1.</li>
+          <li>The public key is (n, e), which can be freely shared.</li>
+        </ul>
+        <li>Encryption:</li>
+        <ul>
+          <li>Convert the plaintext message into a numerical representation.</li>
+          <li>Apply modular exponentiation using the public key (n, e) to encrypt the numerical representation.</li>
+        </ul>
+        <li>Decryption:</li>
+        <ul>
+          <li>Retrieve the encrypted numerical representation.</li>
+          <li>Apply modular exponentiation using the private key (n, d) to decrypt the numerical representation.</li>
+          <li>Convert the decrypted numerical representation back into the original plaintext message.</li>
+        </ul>
+      </ol>
+      <br>
+      <button class="back-btn"><a href="SecureCrypt.html">Back</a></button>
+
+     </div><!--body-card-->
+   </div><!--card-->
+
+  </div><!--reviews-->
+</div><!--section">-->
+
+
+
+</body>
+<footer class="footer">
+  Done by Group#1 Alanoud - Layan - Lama - Nada - Nouv
+  </footer>
+</html>
