@@ -15,7 +15,7 @@ The home page of SecureCrypt features a logo, a paragraph describing the importa
 <img width="469" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/fa704d74-64c4-48e5-af10-c800722f47a9">
 
 
-Encryption And Decryption Page
+Encryption And Decryption Page: 
 
 
 <img width="469" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/80c1dc89-c1b0-48d5-bc69-46b314f6eec4">
@@ -27,7 +27,9 @@ Encryption And Decryption Page
 - Generation of public and private keys using prime numbers and modular arithmetic
 - Validation of user input to ensure data integrity
 - Encryption and decryption of data within the specified range
-- Detailed algorithm specifications for users to understand the RSA cryptosystem! <img width="467" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/4a6a85ac-d70a-4cbf-827c-1cae3fecd72a">
+- Detailed algorithm specifications for users to understand the RSA cryptosystem!
+
+ <img width="467" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/4a6a85ac-d70a-4cbf-827c-1cae3fecd72a">
 
 
 
@@ -65,10 +67,17 @@ To view the algorithm specifications for the RSA cryptosystem, click the "Algori
 
 ### Valid Input Test Cases
 The SecureCrypt application has been tested with various valid input values, resulting in successful encryption and decryption of the data.
+
+
 Encryption Test Case: 
+
+
 <img width="418" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/e88ded33-ac24-4fba-9aff-cf1b8203ecc2">
 
+
 Decryption Test Case: 
+
+
 <img width="417" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/7e1cc51f-fe7a-434e-ae11-52d6fabced81">
 
 
@@ -76,10 +85,17 @@ Decryption Test Case:
 
 ### Invalid Input Test Cases
 The application also handles invalid input, such as non-numeric values and numbers outside the valid range. In such cases, the system displays an alert message informing the user to enter a valid integer between 0 and 11021.
+
+
 Non-numeric Input Test Case:
+
+
  <img width="408" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/220c81bb-1f76-4d4e-bf9f-f41200e77e84">
 
+
 Out of Range Input Test Case: 
+
+
 <img width="408" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/e5205a42-5686-407f-9091-530c7b36995f">
 
 
