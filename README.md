@@ -29,8 +29,6 @@ Encryption And Decryption Page:
 - Encryption and decryption of data within the specified range
 - Detailed algorithm specifications for users to understand the RSA cryptosystem!
 
- <img width="467" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/4a6a85ac-d70a-4cbf-827c-1cae3fecd72a">
-
 
 
 ### Prerequisites
@@ -60,6 +58,7 @@ To decrypt data using the RSA cryptosystem, follow these steps:
 ### Algorithm Specifications
 To view the algorithm specifications for the RSA cryptosystem, click the "Algorithm Specifications" button on the home page. This will display a detailed explanation of the RSA algorithm, including the key generation process, encryption, and decryption.
 
+ <img width="467" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/4a6a85ac-d70a-4cbf-827c-1cae3fecd72a">
 
 
 
