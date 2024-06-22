@@ -10,10 +10,14 @@ The SecureCrypt project aims to provide a user-friendly interface for the implem
 
 
 The home page of SecureCrypt features a logo, a paragraph describing the importance of data security and the RSA algorithm, and two call-to-action buttons that allow users to access the encryption and decryption functionalities, as well as the algorithm specifications.
+
+
 <img width="469" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/fa704d74-64c4-48e5-af10-c800722f47a9">
 
 
 Encryption And Decryption Page
+
+
 <img width="469" alt="image" src="https://github.com/NouvBaLQahtani/Software-Security-Engineering-Project-SWE314/assets/106460665/80c1dc89-c1b0-48d5-bc69-46b314f6eec4">
 
 
